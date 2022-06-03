@@ -27,8 +27,13 @@ export default {
   ],
   components: {
     LinkItem
+  },
+  sortedItems() {
+    return this.items.slice()
+      .sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
   }
 };
+
 </script>
 
 <style lang="scss">
